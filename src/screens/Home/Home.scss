@@ -1,0 +1,14 @@
+.myReels {
+  display: flex;
+}
+@media (max-width: 900px) {
+  .myReels {
+    display: inline !important;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.bg-img {
+  background: url('Group 8129.png');
+}

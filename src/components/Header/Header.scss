@@ -1,0 +1,46 @@
+.site-layout .site-layout-background {
+  background: #fff;
+}
+.site-layout .site-layout-background {
+  background: #102e4a;
+}
+
+@media (max-width: 768px) {
+  .imgBox {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  .search {
+    width: 200px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-container {
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column-reverse !important;
+    width: 100%;
+  }
+}
+h1.ant-typography,
+.ant-typography h1 {
+  margin-bottom: 0.5em;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 1.23;
+  color: white;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: rgba(229, 240, 243, 0.85);
+  font-weight: 500;
+}

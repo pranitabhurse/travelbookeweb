@@ -1,0 +1,583 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  html,
+  body {
+    width: 100%;
+    margin: 0;
+    height: 100%;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+      'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+  .main-container {
+    width: 100%;
+    background-color: rgba(243, 243, 243, 0.308);
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+
+    .left-col {
+      width: 100%;
+      height: 100%;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 150px;
+
+      .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .inner-container {
+          width: 80%;
+          text-align: start;
+
+          .heading1 {
+            font-size: 25px;
+            font-weight: 700;
+          }
+          .para {
+            font-size: 16px;
+          }
+          .progress-bar {
+            width: 100%;
+            display: flex;
+
+            .Progress {
+              width: 60%;
+              height: 8px;
+              border: 1px solid rgba(187, 187, 187, 0.459);
+              background-color: rgba(187, 187, 187, 0.459);
+              margin: 10px 5px 0 5px;
+              border-radius: 5px;
+
+              .prog {
+                width: 30%;
+                background-color: #4aaff7;
+                border: 3px solid #4aaff7;
+                border-radius: 5px;
+              }
+            }
+            .time {
+              margin: 7px 6px;
+              color: #4aaff7;
+              font-size: 10px;
+            }
+            .fa-volume-up,
+            .fa-download {
+              font-size: 18px;
+              margin: 5px 0;
+            }
+            .fa-volume-up {
+              margin: 5px 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .right-col {
+      width: 100%;
+      height: 100%;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+      }
+    }
+  }
+
+  // Start Episode.js part
+
+  .main-episode {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -50px;
+    z-index: 999;
+
+    .inner-episode {
+      width: 75%;
+      // border: 1px solid red;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      background-color: #fff;
+
+      .Latest-Podcast-Episode {
+        width: 100%;
+        padding: 20px;
+        display: flex !important;
+        justify-content: space-between;
+
+        .Podcast-Episode {
+          .heading1 {
+            font-weight: 700;
+          }
+        }
+        .Podcast-Episode-btn {
+          padding: 8px 0 0 0;
+          margin: 0 0 0 20px;
+        }
+      }
+
+      .lactures {
+        width: 100%;
+        display: flex;
+
+        .left-lactures-col {
+          width: 20%;
+          .img {
+            width: 100%;
+          }
+        }
+        .right-lactures-col {
+          width: 78%;
+
+          .right-lactures-col-row {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            // border: 1px solid red;
+            padding: 10px 0;
+
+            .right-lactures-col-row-left-col {
+              width: 70%;
+
+              .heading2 {
+                font-weight: 700;
+              }
+              .para {
+                color: rgb(150, 150, 150);
+              }
+
+              .progress-bar {
+                width: 100%;
+                display: flex;
+
+                .fa-play-circle {
+                  font-size: 30px;
+                  color: #4aaff7;
+                }
+
+                .Progress {
+                  width: 60%;
+                  height: 8px;
+                  border: 1px solid rgba(187, 187, 187, 0.459);
+                  background-color: rgba(187, 187, 187, 0.459);
+                  margin: 10px 5px 0 5px;
+                  border-radius: 5px;
+
+                  .prog {
+                    width: 30%;
+                    background-color: #4aaff7;
+                    border: 3px solid #4aaff7;
+                    border-radius: 5px;
+                  }
+                }
+                .time {
+                  margin: 7px 6px;
+                  color: #4aaff7;
+                  font-size: 10px;
+                }
+                .fa-volume-up,
+                .fa-download {
+                  font-size: 18px;
+                  margin: 5px 0;
+                }
+                .fa-volume-up {
+                  margin: 5px 10px;
+                }
+              }
+            }
+            .right-lactures-col-row-right-col {
+              border-left: 1px solid #dcdcdcbe;
+              width: 28%;
+
+              p {
+                color: #c4c4c4;
+
+                .time {
+                  color: #4aaff7;
+                }
+              }
+            }
+          }
+        }
+      }
+      .border-btn {
+        font-weight: 600;
+        color: #4aaff7;
+        border: 1px solid #4aaff7;
+      }
+      .border-btn:hover {
+        background-color: #4aaff7;
+        color: #fff;
+      }
+    }
+  }
+  // End episode part
+
+  // start RatingReview part
+
+  .RatingReview-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    .RatingReview-row {
+      width: 75%;
+      display: flex;
+      margin-top: 800px;
+      border-bottom: 1px solid rgba(172, 172, 172, 0.726);
+      .RatingReview-col {
+        border-right: 1px solid rgba(172, 172, 172, 0.726);
+        padding-bottom: 25px;
+        width: 50%;
+
+        .progressBar {
+          width: 90%;
+          .prog-div {
+            width: 100%;
+            display: flex;
+            padding: 4px 0px;
+            .ProgressRating {
+              width: 100%;
+              height: 10px;
+              border: 1px solid rgba(187, 187, 187, 0.74);
+              background-color: white;
+              margin: 10px 5px 0 5px;
+              border-radius: 5px;
+              padding: 1px 2px;
+
+              .progRating {
+                width: 100%;
+                height: 100%;
+                background-color: #4aaff7;
+                border: 3px solid #4aaff7;
+                border-radius: 5px;
+              }
+            }
+          }
+        }
+      }
+      .RatingReview-right-col {
+        padding-left: 50px !important;
+        width: 50%;
+        .col-div {
+          .fa-star {
+            margin: 10px;
+            font-size: 18px;
+            color: #cccccc;
+          }
+          .message-box {
+            border: 1px solid rgba(49, 49, 49, 0.425);
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+            p {
+              margin: 40px 0;
+              text-align: center;
+              font-size: 25px;
+              color: #d3d3d3;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .review {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    .review-row {
+      width: 75%;
+      .rating-point {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  .review-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .review-btn {
+      width: 75%;
+      display: flex;
+      justify-content: flex-end;
+      padding: 30px 0 0 0;
+
+      Button {
+        border: 1px solid #4aaff7;
+        color: #4aaff7;
+        font-weight: 600;
+        border-radius: 5px;
+      }
+      Button:hover {
+        background-color: #4aaff7;
+        color: white;
+      }
+    }
+  }
+
+  // end RatingReview part
+
+  // Start recommended courses part
+
+  .recommend-course {
+    width: 100%;
+    height: 100%;
+    background-color: #f3f3f3;
+    padding: 30px 0;
+
+    .headTextBox {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      .heading1 {
+        font-weight: 700;
+        .time {
+          color: #4aaff7;
+        }
+      }
+      .para {
+        color: #000;
+        font-weight: 400;
+      }
+    }
+    .courses-row-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .courses-row {
+        width: 85%;
+        .col-3 {
+          width: 22%;
+          margin: 20px 15px;
+
+          .course-name {
+            width: 100%;
+            background-color: #4aaff7;
+            margin-top: -5px;
+
+            .shopingCard {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              border: 2px solid #7ec7fc;
+              background-color: white;
+              position: absolute;
+              top: 15px;
+              left: 15px;
+
+              .Card {
+                width: 40px;
+                padding: 10px 0 0 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // end recommended courses part
+}
+@media (max-width: 2000px) {
+  .RatingReview-container {
+    .RatingReview-row {
+      margin-top: 950px !important;
+    }
+  }
+}
+@media (max-width: 1900px) {
+  .RatingReview-container {
+    .RatingReview-row {
+      margin-top: 900px !important;
+    }
+  }
+}
+@media (max-width: 1800px) {
+  .RatingReview-container {
+    .RatingReview-row {
+      margin-top: 850px !important;
+    }
+  }
+}
+@media (max-width: 1700px) {
+  .RatingReview-container {
+    .RatingReview-row {
+      margin-top: 830px !important;
+    }
+  }
+}
+@media (max-width: 1600px) {
+  .RatingReview-container {
+    .RatingReview-row {
+      margin-top: 790px !important;
+    }
+  }
+}
+@media (max-width: 1492px) {
+  .RatingReview-container {
+    .RatingReview-row {
+      margin-top: 770px !important;
+    }
+  }
+}
+@media (max-width: 1400px) {
+  .recommend-course {
+    .col-3 {
+      width: 30% !important;
+    }
+  }
+  .RatingReview-container {
+    .RatingReview-row {
+      margin-top: 750px !important;
+    }
+  }
+}
+@media (max-width: 1250px) {
+  .lactures {
+    display: block !important;
+    border-top: 1px solid #c4c4c470 !important;
+    padding: 20px 30px !important;
+    .left-lactures-col {
+      width: 25% !important;
+    }
+    .right-lactures-col {
+      width: 100% !important;
+    }
+  }
+  .main-episode {
+    position: static !important;
+  }
+  .RatingReview-container {
+    .RatingReview-row {
+      margin-top: 50px !important;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .left-col {
+    padding-left: 0px !important;
+  }
+  .right-col {
+    .video-img {
+      width: 100% !important;
+    }
+  }
+  .main-container {
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column-reverse !important;
+    width: 100%;
+  }
+  .recommend-course {
+    .col-3 {
+      width: 45% !important;
+    }
+  }
+  .RatingReview-container {
+    .RatingReview-row {
+      display: block !important;
+      .RatingReview-col {
+        border-right: none !important;
+        width: 100% !important;
+      }
+      .RatingReview-right-col {
+        width: 100% !important;
+        padding: 10px 0 !important;
+      }
+    }
+  }
+}
+@media (max-width: 900px) {
+  .right-lactures-col-row {
+    display: block !important;
+    .right-lactures-col-row-left-col {
+      width: 100% !important;
+    }
+    .right-lactures-col-row-right-col {
+      width: 100% !important;
+      border: none !important;
+      padding: 10px 0 !important;
+    }
+  }
+  .lactures {
+    .right-lactures-col-row {
+      padding: 0px !important;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .recommend-course {
+    .col-3 {
+      width: auto !important;
+    }
+    .headTextBox {
+      .TextBox {
+        width: 100% !important;
+        display: block !important;
+        text-align: center !important;
+        padding: 0 10px !important;
+      }
+    }
+  }
+  .main-episode {
+    width: 100% !important;
+    .inner-episode {
+      box-shadow: none !important;
+    }
+  }
+}
+@media (max-width: 680px) {
+  .Latest-Podcast-Episode {
+    display: block !important;
+    .Podcast-Episode-btn {
+      margin: 0px !important;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .recommend-course {
+    .col-3 {
+      margin: 20px 0 !important;
+    }
+  }
+  .rating-point {
+    display: block !important;
+    p {
+      padding: 15px 0 0 0 !important;
+    }
+  }
+}
